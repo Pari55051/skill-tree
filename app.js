@@ -4,20 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initializeSkillTree() {
-    // hover effects
+
     const skillCards = document.querySelectorAll('[class*="col-start-"][class*="row-start-"]');
 
     skillCards.forEach(card => {
         if (card.querySelector('h3')) {
-            card.addEventListener('mouseenter', function () {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-                this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
-            });
-
-            card.addEventListener('mouseleave', function () {
-                this.style.transform = 'translateY(-4px)';
-                this.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
-            });
 
             // skill details on click
             card.addEventListener('click', function () {
@@ -42,28 +33,14 @@ function initializeForm() {
             const skillCategory = formData.get('skillCategory');
             const skillDescription = formData.get('skillDescription').trim();
 
-            // --- form validation ---
-            if (!skillName) {
-                showFormMessage('Please enter a skill name.', 'error');
-                document.getElementById('skillName').focus();
-                return;
-            }
 
-            if (!skillCategory) {
-                showFormMessage('Please select a category.', 'error');
-                document.getElementById('skillCategory').focus();
-                return;
-            }
-
-            // --- fake form submission animation ---
+            // --- fake form submission ---
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
 
-            // loading state
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Planting...';
             submitButton.disabled = true;
-
-            // submitted message
+          
             setTimeout(() => {
                 showFormMessage(
                     `Thank you! "${skillName}" has been suggested for the ${skillCategory} category. It will be reviewed for addition to our skill tree!`,
@@ -76,7 +53,9 @@ function initializeForm() {
                 submitButton.disabled = false;
 
                 setTimeout(() => {
-                    hideFormMessage();
+                    if (document.getElementById('formMessage')) {
+                        formMessage.classList.add('hidden');
+                    }
                 }, 5000);
 
             }, 1500);
@@ -100,7 +79,7 @@ function showSkillDetails(skillName, progress) {
 
     const description = skillInfo[skillName] || 'An important skill in the web development journey.';
 
-    
+
     const modal = document.createElement('div');
     modal.className = 'fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50 opacity-0 transition-opacity duration-300';
     modal.innerHTML = `
@@ -120,7 +99,7 @@ function showSkillDetails(skillName, progress) {
 
     document.body.appendChild(modal);
 
-    
+
     // close details
     const closeModal = () => {
         modal.style.opacity = '0';
@@ -163,9 +142,3 @@ function showFormMessage(message, type) {
     }
 }
 
-function hideFormMessage() {
-    const formMessage = document.getElementById('formMessage');
-    if (formMessage) {
-        formMessage.classList.add('hidden');
-    }
-}
