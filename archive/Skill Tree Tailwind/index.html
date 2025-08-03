@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌳 The Skill Tree - Visual Learning Path</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-green-50 min-h-screen">
+    <!-- Sticky Navbar -->
+    <nav class="sticky top-0 bg-green-100 shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-green-800">🌳 The Skill Tree</h1>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-green-700 hover:text-green-900 px-3 py-2 rounded transition-colors">Home</a>
+                    <a href="#skills" class="text-green-700 hover:text-green-900 px-3 py-2 rounded transition-colors">Skills</a>
+                    <a href="#suggest" class="text-green-700 hover:text-green-900 px-3 py-2 rounded transition-colors">Suggest</a>
+                </div>
+                
+                <button class="md:hidden text-green-800 p-2" id="navbarToggle">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobileMenu">
+                <div class="pb-4 space-y-2">
+                    <a href="#home" class="block text-green-700 hover:text-green-900 px-3 py-2 rounded transition-colors">Home</a>
+                    <a href="#skills" class="block text-green-700 hover:text-green-900 px-3 py-2 rounded transition-colors">Skills</a>
+                    <a href="#suggest" class="block text-green-700 hover:text-green-900 px-3 py-2 rounded transition-colors">Suggest</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-green-100 py-16" id="home">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-6">Welcome to Your Learning Journey</h2>
+                <p class="text-lg text-green-700 max-w-3xl mx-auto">Explore the interconnected world of web development skills. Each card represents a skill you can master on your path to becoming a developer.</p>
+            </div>
+        </section>
+
+        <!-- Skill Tree Section -->
+        <section class="py-16 bg-green-50" id="skills">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">🌲 The Skill Tree</h2>
+                    <p class="text-lg text-green-700">Track your progress on each skill in your development journey</p>
+                </div>
+                
+                <!-- Tree Container -->
+                <div class="relative">
+                    <!-- Tree Trunk -->
+                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-32 bg-amber-600 shadow-lg"></div>
+                    
+                    <!-- Skill Grid with Branches -->
+                    <div class="grid grid-cols-12 gap-2 min-h-screen relative pt-8">
+                        
+                        <!-- Branch Elements -->
+                        <!-- Vertical trunk connection -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-16 bg-amber-300 bottom-32"></div>
+                        
+                        <!-- Main horizontal branch -->
+                        <div class="absolute left-1/4 right-1/4 h-1 bg-amber-300 bottom-48 border-t-4 border-amber-300"></div>
+                        
+                        <!-- Staircase branches - left side -->
+                        <div class="absolute left-1/4 w-8 h-1 bg-amber-200 border-b-4 border-amber-300" style="bottom: 350px;"></div>
+                        <div class="absolute w-1 h-8 bg-amber-200 border-l-4 border-amber-300" style="left: calc(25% + 2rem); bottom: 330px;"></div>
+                        <div class="absolute w-12 h-1 bg-amber-200 border-b-4 border-amber-300" style="left: calc(25% + 2rem); bottom: 330px;"></div>
+                        
+                        <!-- Staircase branches - right side -->
+                        <div class="absolute right-1/4 w-8 h-1 bg-amber-200 border-b-4 border-amber-300" style="bottom: 380px;"></div>
+                        <div class="absolute w-1 h-12 bg-amber-200 border-l-4 border-amber-300" style="right: calc(25% + 2rem); bottom: 360px;"></div>
+                        <div class="absolute w-16 h-1 bg-amber-200 border-b-4 border-amber-300" style="right: calc(25% + 4rem); bottom: 360px;"></div>
+                        
+                        <!-- Dead end branches -->
+                        <div class="absolute w-1 h-16 bg-amber-200 border-l-4 border-amber-300" style="left: 15%; bottom: 200px;"></div>
+                        <div class="absolute w-12 h-1 bg-amber-200 border-b-4 border-amber-300" style="right: 10%; bottom: 250px;"></div>
+                        
+                        <!-- Skill Cards -->
+                        <!-- Row 1 (Top) -->
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 3;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fas fa-universal-access text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">Accessibility</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-600 h-2" style="width: 50%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">50%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 8;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fas fa-puzzle-piece text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">Problem Solving</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-600 h-2" style="width: 55%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">55%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 2;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fas fa-bug text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">Debugging</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-600 h-2" style="width: 45%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">45%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 5;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fab fa-css3 text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">Tailwind CSS</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-700 h-2" style="width: 85%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 9;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fab fa-git-alt text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">Git</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-600 h-2" style="width: 70%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 3 (Bottom Foundation) -->
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 2;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fab fa-html5 text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">HTML</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-700 h-2" style="width: 90%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 5;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fab fa-css3-alt text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">CSS</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-600 h-2" style="width: 75%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-span-12 md:col-span-3 lg:col-span-2" style="grid-column-start: 8;">
+                            <div class="bg-green-200 border-2 border-green-300 p-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                                <div class="text-center">
+                                    <i class="fab fa-js text-green-800 text-sm mb-2"></i>
+                                    <h3 class="font-semibold text-green-900 text-sm mb-2">JavaScript</h3>
+                                    <div class="w-full bg-green-100 h-2 mb-1">
+                                        <div class="bg-green-600 h-2" style="width: 60%"></div>
+                                    </div>
+                                    <span class="text-xs text-green-700">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggestion Form Section -->
+        <section class="py-16 bg-green-100" id="suggest">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">🌱 Suggest a Skill</h2>
+                    <p class="text-lg text-green-700">Help us grow the skill tree by suggesting new skills to add</p>
+                </div>
+                
+                <div class="max-w-2xl mx-auto">
+                    <form id="suggestionForm" class="bg-green-50 p-8 shadow-lg border border-green-200">
+                        <div class="mb-6">
+                            <label for="skillName" class="block text-sm font-medium text-green-800 mb-2">Skill Name</label>
+                            <input type="text" id="skillName" name="skillName" required 
+                                   class="w-full px-4 py-3 border-2 border-green-300 bg-white text-green-900 focus:border-green-500 focus:outline-none transition-colors"
+                                   placeholder="e.g., TypeScript, Docker, GraphQL">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="skillCategory" class="block text-sm font-medium text-green-800 mb-2">Category</label>
+                            <select id="skillCategory" name="skillCategory" required 
+                                    class="w-full px-4 py-3 border-2 border-green-300 bg-white text-green-900 focus:border-green-500 focus:outline-none transition-colors">
+                                <option value="">Select a category</option>
+                                <option value="frontend">Frontend</option>
+                                <option value="backend">Backend</option>
+                                <option value="tools">Tools & DevOps</option>
+                                <option value="design">Design</option>
+                                <option value="database">Database</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="skillDescription" class="block text-sm font-medium text-green-800 mb-2">Description</label>
+                            <textarea id="skillDescription" name="skillDescription" rows="4" 
+                                      class="w-full px-4 py-3 border-2 border-green-300 bg-white text-green-900 focus:border-green-500 focus:outline-none transition-colors"
+                                      placeholder="Describe why this skill is important and how it fits into the learning path..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 transition-colors flex items-center justify-center">
+                            <i class="fas fa-seedling mr-2"></i>
+                            Plant This Skill
+                        </button>
+                        
+                        <div id="formMessage" class="hidden mt-4 p-4 text-center font-medium"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-green-100 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-2">&copy; 2025 The Skill Tree. Nurturing developers, one skill at a time. 🌱</p>
+            <p class="text-sm text-green-300">Keep growing, keep learning!</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

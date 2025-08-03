@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌳 Skill Tree</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mint': {
+                            50: '#f0f9f0',
+                            100: '#e8f5e8',
+                            200: '#d4e4d4',
+                            300: '#c8e6c9',
+                            400: '#a8d5a8',
+                            500: '#81c784',
+                            600: '#66bb6a',
+                            700: '#4caf50',
+                            800: '#43a047'
+                        },
+                        'sage': {
+                            50: '#f8fdf8',
+                            100: '#e8f5e9',
+                            200: '#dcedc8',
+                            300: '#c5e1a5',
+                            400: '#aed581',
+                            500: '#4a7c59',
+                            600: '#2d5016'
+                        },
+                        'tan': {
+                            100: '#e8d5b7',
+                            200: '#d4b896',
+                            300: '#c4a676'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards'
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-mint-50 text-sage-600 font-sans">
+
+
+    <nav class="bg-mint-100 border-b border-mint-200 px-4 py-4 shadow-sm">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-sage-600 m-0">🌳 Skill Tree</h1>
+                <div>
+                    <a href="#home" class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
+                        Home
+                    </a>
+                    <a href="#suggest" class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
+                        Suggest a Skill
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="min-h-screen">
+
+        <!-- =====================
+               SKILL TREE
+         ===================== -->
+        <section class="py-8 bg-mint-50" id="home">
+            <div class="relative max-w-5xl mx-auto px-8">
+                
+                <!-- Trunk -->
+                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-tan-200 border-2 border-tan-300 rounded-sm shadow-sm z-50"></div>
+                
+                <!-- Grid Start -->
+                <div class="grid grid-cols-8 grid-rows-5 gap-4 pt-8 relative" style="grid-template-rows: repeat(5, 110px);">
+                    
+                    <!--=============Row 1 ============ -->
+                    
+                    <!-- Skill Card 1 -->
+                    <div class="col-start-4 col-span-2 row-start-1 flex flex-col justify-between relative z-10 bg-mint-100 border-2 border-mint-200 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.7s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-universal-access text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">Accessibility</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 50%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">50%</span>
+                        </div>
+                        <!-- Branch down -->
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-3 h-40 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
+                    </div>
+
+                    <!-- ============= Row 2 ================-->
+                    
+                    <!-- Skill Card 2 -->
+                    <div class="col-start-2 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.5s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-bug text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">Debugging</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 45%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">45%</span>
+                        </div>
+                        <!-- Branch right -->
+                        <!-- <div class="absolute top-1/2 left-full w-8 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div> -->
+                    </div>
+
+                    <!-- Horizontal connecting branch -->
+                    <div class="col-start-3 col-span-5 row-start-2 self-center h-3 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="col-start-6 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.8s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-puzzle-piece text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">Problem Solving</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 55%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">55%</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    
+                    <!-- Tailwind CSS Skill Card -->
+                    <div class="col-start-1 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fab fa-css3 text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">Tailwind CSS</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 85%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">85%</span>
+                        </div>
+                        <!-- Branch right -->
+                        <div class="absolute top-1/2 left-full w-60 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div>
+                    </div>
+
+                    <!-- JavaScript Skill Card -->
+                    <div class="col-start-4 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fab fa-js text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">JavaScript</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 60%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">60%</span>
+                        </div>
+                        <!-- Branch right -->
+                        <div class="absolute top-1/2 left-full w-80 h-3.5 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div>
+                    </div>
+
+                    <!-- Horizontal connecting branch -->
+                    <!-- <div class="col-start-5 col-span-5 row-start-3 w-3/4 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5"></div> -->
+
+                    <!-- Git Skill Card -->
+                    <div class="col-start-7 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fab fa-git-alt text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">Git</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 70%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">70%</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 - Vertical connectors -->
+                    <div class="col-start-2 row-start-2 justify-self-center w-3 h-80 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
+                    <!-- <div class="col-start-5 row-start-3 justify-self-center w-3 h-60 bg-tan-200 border border-tan-300 rounded-sm z-2"></div> -->
+                    <div class="col-start-7 row-start-2 justify-self-center w-3 h-80 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
+
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-3 h-60 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
+
+                    <!-- Row 5 (Bottom Level) -->
+                    
+                    <!-- HTML Skill Card -->
+                    <div class="col-start-2 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fab fa-html5 text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">HTML</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 90%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">90%</span>
+                        </div>
+                        <!-- Branch right -->
+                        <!-- <div class="absolute top-1/2 left-full w-8 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div> -->
+                    </div>
+
+                    <!-- Horizontal connecting branch -->
+                    <div class="col-start-3 col-span-4 row-start-4 self-center h-4 bg-tan-300 rounded-sm z-5"></div>
+
+                    <!-- CSS Skill Card -->
+                    <div class="col-start-6 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fab fa-css3-alt text-sm text-sage-500 opacity-70"></i>
+                            <h3 class="text-sm font-semibold text-sage-600 m-0">CSS</h3>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 75%"></div>
+                            </div>
+                            <span class="text-xs font-medium text-sage-500 min-w-[30px]">75%</span>
+                        </div>
+                    </div>
+
+                    <!-- Dead end branches -->
+                    <!-- <div class="col-start-7 row-start-1 self-end w-6 h-3 bg-tan-100 border border-tan-200 rounded-sm opacity-80 z-5"></div>
+                    <div class="col-start-1 row-start-4 self-start w-4 h-3 bg-tan-100 border border-tan-200 rounded-sm opacity-80 z-5"></div> -->
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggestion Section -->
+        <section id="suggest" class="py-8 bg-mint-100">
+            <div class="max-w-2xl mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-sage-600 mb-2">🌱 Suggest a Skill</h2>
+                    <p class="text-lg text-sage-500 m-0">Help us grow the skill tree by suggesting new skills to add</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border-2 border-mint-200 shadow-md">
+                    <form id="suggestionForm" class="space-y-4">
+                        <div>
+                            <label for="skillName" class="block mb-2 font-medium text-sm text-sage-600">Skill Name</label>
+                            <input type="text" id="skillName" name="skillName" class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20" required />
+                        </div>
+                        
+                        <div>
+                            <label for="skillCategory" class="block mb-2 font-medium text-sm text-sage-600">Category</label>
+                            <select id="skillCategory" name="skillCategory" class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20 appearance-none" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%234a7c59\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpolyline points=\'6 9 12 15 18 9\'%3E%3C/polyline%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px;">
+                                <option value="">Select a category</option>
+                                <option value="Frontend">Frontend</option>
+                                <option value="Backend">Backend</option>
+                                <option value="Tools & DevOps">Tools & DevOps</option>
+                                <option value="Design">Design</option>
+                                <option value="Database">Database</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="skillDescription" class="block mb-2 font-medium text-sm text-sage-600">Why this skill?</label>
+                            <textarea id="skillDescription" name="skillDescription" rows="3" class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20 font-sans"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-mint-600 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-mint-700 active:bg-mint-800 border-none cursor-pointer">
+                            Submit Suggestion
+                        </button>
+                    </form>
+                    
+                    <div id="formMessage" class="hidden mt-4 p-3 rounded-lg text-center font-medium"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-tan-200 text-sage-600 py-6 text-center border-t-2 border-tan-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="m-0 font-medium">© 2025 – The Skill Tree. Growth never stops 🌿</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skill Tree Application - Minimal JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the application
+            initializeSkillTree();
+            initializeForm();
+            addScrollEffects();
+        });
+
+        function initializeSkillTree() {
+            // Add interactive hover effects to skill cards
+            const skillCards = document.querySelectorAll('[class*="col-start-"][class*="row-start-"]');
+            
+            skillCards.forEach(card => {
+                if (card.querySelector('h3')) {
+                    // Enhanced hover effect
+                    card.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-8px) scale(1.02)';
+                        this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+                    });
+                    
+                    card.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(-4px)';
+                        this.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                    });
+                    
+                    // Click interaction for skill details
+                    card.addEventListener('click', function() {
+                        const skillName = this.querySelector('h3').textContent;
+                        const progressText = this.querySelector('span').textContent;
+                        showSkillDetails(skillName, progressText);
+                    });
+                }
+            });
+        }
+
+        function initializeForm() {
+            const form = document.getElementById('suggestionForm');
+            const formMessage = document.getElementById('formMessage');
+            
+            if (form && formMessage) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const skillName = formData.get('skillName').trim();
+                    const skillCategory = formData.get('skillCategory');
+                    const skillDescription = formData.get('skillDescription').trim();
+                    
+                    // Validation
+                    if (!skillName) {
+                        showFormMessage('Please enter a skill name.', 'error');
+                        document.getElementById('skillName').focus();
+                        return;
+                    }
+                    
+                    if (!skillCategory) {
+                        showFormMessage('Please select a category.', 'error');
+                        document.getElementById('skillCategory').focus();
+                        return;
+                    }
+                    
+                    // Simulate form submission
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.innerHTML;
+                    
+                    // Show loading state
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Planting...';
+                    submitButton.disabled = true;
+                    
+                    // Simulate API call delay
+                    setTimeout(() => {
+                        showFormMessage(
+                            `🌱 Thank you! "${skillName}" has been suggested for the ${skillCategory} category. It will be reviewed for addition to our skill tree!`,
+                            'success'
+                        );
+                        
+                        // Reset form
+                        this.reset();
+                        submitButton.innerHTML = originalText;
+                        submitButton.disabled = false;
+                        
+                        // Auto-hide message after 5 seconds
+                        setTimeout(() => {
+                            hideFormMessage();
+                        }, 5000);
+                    }, 1500);
+                });
+            }
+        }
+
+        function addScrollEffects() {
+            // Smooth scrolling for navbar link
+            const navbarLink = document.querySelector('nav a[href="#suggest"]');
+            if (navbarLink) {
+                navbarLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetSection = document.querySelector('#suggest');
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            }
+        }
+
+        function showSkillDetails(skillName, progress) {
+            // Skill descriptions
+            const skillInfo = {
+                'HTML': 'The foundation of web development. HTML provides structure and semantic meaning to web content.',
+                'CSS': 'Styles and layouts for beautiful, responsive web pages that work across all devices.',
+                'JavaScript': 'Brings interactivity and dynamic behavior to web applications. Essential for modern development.',
+                'Tailwind CSS': 'Utility-first CSS framework for rapidly building custom user interfaces.',
+                'Git': 'Version control system for tracking changes and collaborating with development teams.',
+                'Debugging': 'Essential skill for identifying and fixing issues in code efficiently.',
+                'Accessibility': 'Making web applications usable by everyone, including people with disabilities.',
+                'Problem Solving': 'Critical thinking and analytical skills for breaking down complex challenges.'
+            };
+            
+            const description = skillInfo[skillName] || 'An important skill in the web development journey.';
+            
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50 opacity-0 transition-opacity duration-300';
+            modal.innerHTML = `
+                <div class="bg-white p-6 rounded-xl max-w-lg mx-5 transform scale-90 transition-transform duration-300 border-2 border-mint-200">
+                    <div class="flex justify-between items-center mb-4 pb-3 border-b border-mint-200">
+                        <h3 class="text-xl text-sage-600 m-0">${skillName}</h3>
+                        <button class="bg-transparent border-none text-2xl cursor-pointer text-sage-500 p-1 rounded hover:bg-mint-200 transition-colors duration-200">×</button>
+                    </div>
+                    <div class="bg-mint-100 p-2 rounded mb-4 text-sage-600 text-sm">
+                        Progress: ${progress}
+                    </div>
+                    <div class="text-sage-600 leading-relaxed">
+                        ${description}
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Animate in
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                modal.querySelector('div').style.transform = 'scale(1)';
+            }, 10);
+            
+            // Close handlers
+            const closeModal = () => {
+                modal.style.opacity = '0';
+                modal.querySelector('div').style.transform = 'scale(0.9)';
+                setTimeout(() => modal.remove(), 300);
+            };
+            
+            modal.querySelector('button').addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            
+            // Close on escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeModal();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
+        }
+
+        function showFormMessage(message, type) {
+            const formMessage = document.getElementById('formMessage');
+            if (formMessage) {
+                formMessage.textContent = message;
+                
+                if (type === 'success') {
+                    formMessage.className = 'mt-4 p-3 rounded-lg text-center font-medium bg-mint-600 bg-opacity-10 text-green-800 border border-mint-600 border-opacity-30';
+                } else if (type === 'error') {
+                    formMessage.className = 'mt-4 p-3 rounded-lg text-center font-medium bg-red-500 bg-opacity-10 text-red-800 border border-red-500 border-opacity-30';
+                }
+                
+                formMessage.classList.remove('hidden');
+                
+                // Scroll into view
+                formMessage.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            }
+        }
+
+        function hideFormMessage() {
+            const formMessage = document.getElementById('formMessage');
+            if (formMessage) {
+                formMessage.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
