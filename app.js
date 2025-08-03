@@ -1,19 +1,15 @@
-
-// Skill Tree Application - Minimal JavaScript
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize the application
     initializeSkillTree();
     initializeForm();
     addScrollEffects();
 });
 
 function initializeSkillTree() {
-    // Add interactive hover effects to skill cards
+    // hover effects
     const skillCards = document.querySelectorAll('[class*="col-start-"][class*="row-start-"]');
 
     skillCards.forEach(card => {
         if (card.querySelector('h3')) {
-            // Enhanced hover effect
             card.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-8px) scale(1.02)';
                 this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
@@ -24,7 +20,7 @@ function initializeSkillTree() {
                 this.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             });
 
-            // Click interaction for skill details
+            // skill details on click
             card.addEventListener('click', function () {
                 const skillName = this.querySelector('h3').textContent;
                 const progressText = this.querySelector('span').textContent;
@@ -42,13 +38,12 @@ function initializeForm() {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            // Get form data
             const formData = new FormData(this);
             const skillName = formData.get('skillName').trim();
             const skillCategory = formData.get('skillCategory');
             const skillDescription = formData.get('skillDescription').trim();
 
-            // Validation
+            // --- form validation ---
             if (!skillName) {
                 showFormMessage('Please enter a skill name.', 'error');
                 document.getElementById('skillName').focus();
@@ -61,37 +56,36 @@ function initializeForm() {
                 return;
             }
 
-            // Simulate form submission
+            // --- fake form submission animation ---
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
 
-            // Show loading state
+            // loading state
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Planting...';
             submitButton.disabled = true;
 
-            // Simulate API call delay
+            // submitted message
             setTimeout(() => {
                 showFormMessage(
-                    `🌱 Thank you! "${skillName}" has been suggested for the ${skillCategory} category. It will be reviewed for addition to our skill tree!`,
+                    `Thank you! "${skillName}" has been suggested for the ${skillCategory} category. It will be reviewed for addition to our skill tree!`,
                     'success'
                 );
 
-                // Reset form
+                // reset form
                 this.reset();
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
 
-                // Auto-hide message after 5 seconds
                 setTimeout(() => {
                     hideFormMessage();
                 }, 5000);
+
             }, 1500);
         });
     }
 }
 
 function addScrollEffects() {
-    // Smooth scrolling for navbar link
     const navbarLink = document.querySelector('nav a[href="#suggest"]');
     if (navbarLink) {
         navbarLink.addEventListener('click', function (e) {
@@ -108,7 +102,7 @@ function addScrollEffects() {
 }
 
 function showSkillDetails(skillName, progress) {
-    // Skill descriptions
+    // skill descriptions
     const skillInfo = {
         'HTML': 'The foundation of web development. HTML provides structure and semantic meaning to web content.',
         'CSS': 'Styles and layouts for beautiful, responsive web pages that work across all devices.',
@@ -122,7 +116,7 @@ function showSkillDetails(skillName, progress) {
 
     const description = skillInfo[skillName] || 'An important skill in the web development journey.';
 
-    // Create modal
+    
     const modal = document.createElement('div');
     modal.className = 'fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50 opacity-0 transition-opacity duration-300';
     modal.innerHTML = `
@@ -142,13 +136,13 @@ function showSkillDetails(skillName, progress) {
 
     document.body.appendChild(modal);
 
-    // Animate in
+    // In - animatation
     setTimeout(() => {
         modal.style.opacity = '1';
         modal.querySelector('div').style.transform = 'scale(1)';
     }, 10);
 
-    // Close handlers
+    // close details
     const closeModal = () => {
         modal.style.opacity = '0';
         modal.querySelector('div').style.transform = 'scale(0.9)';
@@ -160,7 +154,6 @@ function showSkillDetails(skillName, progress) {
         if (e.target === modal) closeModal();
     });
 
-    // Close on escape key
     const handleEscape = (e) => {
         if (e.key === 'Escape') {
             closeModal();
@@ -183,7 +176,6 @@ function showFormMessage(message, type) {
 
         formMessage.classList.remove('hidden');
 
-        // Scroll into view
         formMessage.scrollIntoView({
             behavior: 'smooth',
             block: 'nearest'

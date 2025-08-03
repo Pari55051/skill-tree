@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌳 Skill Tree</title>
-    
-    <!-- Tailwind CSS -->
+    <title>Skill Tree</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -62,18 +62,21 @@
         }
     </script>
 </head>
+
 <body class="bg-mint-50 text-sage-600 font-sans">
 
 
     <nav class="bg-mint-100 border-b border-mint-200 px-4 py-4 shadow-sm">
         <div class="max-w-6xl mx-auto">
             <div class="flex items-center justify-between">
-                <h1 class="text-2xl font-bold text-sage-600 m-0">🌳 Skill Tree</h1>
+                <h1 class="text-2xl font-bold text-sage-600 m-0">Skill Tree</h1>
                 <div>
-                    <a href="#home" class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
+                    <a href="#home"
+                        class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
                         Home
                     </a>
-                    <a href="#suggest" class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
+                    <a href="#suggest"
+                        class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
                         Suggest a Skill
                     </a>
                 </div>
@@ -84,47 +87,55 @@
 
     <main class="min-h-screen">
 
-        <!-- =====================
-               SKILL TREE
-         ===================== -->
+        <!-- =================================
+                        TREE
+         ================================== -->
         <section class="py-8 bg-mint-50" id="home">
             <div class="relative max-w-5xl mx-auto px-8">
-                
+
                 <!-- Trunk -->
                 <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-tan-200 border-2 border-tan-300 rounded-sm shadow-sm z-50"></div>
-                
+
                 <!-- Grid Start -->
-                <div class="grid grid-cols-8 grid-rows-5 gap-4 pt-8 relative" style="grid-template-rows: repeat(5, 110px);">
-                    
-                    <!--=============Row 1 ============ -->
-                    
+                <div class="grid grid-cols-8 grid-rows-5 gap-4 pt-8 relative"
+                    style="grid-template-rows: repeat(5, 110px);">
+
+
+                    <!--============= Row 1 ============ -->
+
                     <!-- Skill Card 1 -->
-                    <div class="col-start-4 col-span-2 row-start-1 flex flex-col justify-between relative z-10 bg-mint-100 border-2 border-mint-200 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.7s;">
+                    <div class="col-start-4 col-span-2 row-start-1 flex flex-col justify-between relative z-10 bg-mint-100 border-2 border-mint-200 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.7s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-universal-access text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">Accessibility</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 50%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 50%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">50%</span>
                         </div>
-                        <!-- Branch down -->
+                        <!-- Branch Vertical -->
                         <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-3 h-40 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
                     </div>
 
+
+
                     <!-- ============= Row 2 ================-->
-                    
+
                     <!-- Skill Card 2 -->
-                    <div class="col-start-2 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="col-start-2 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.5s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-bug text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">Debugging</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 45%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 45%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">45%</span>
                         </div>
@@ -132,92 +143,111 @@
                         <!-- <div class="absolute top-1/2 left-full w-8 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div> -->
                     </div>
 
-                    <!-- Horizontal connecting branch -->
+                    <!-- Branch Horizontal -->
                     <div class="col-start-3 col-span-5 row-start-2 self-center h-3 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
 
                     <!-- Skill Card 3 -->
-                    <div class="col-start-6 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.8s;">
+                    <div class="col-start-6 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.8s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-puzzle-piece text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">Problem Solving</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 55%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 55%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">55%</span>
                         </div>
                     </div>
 
-                    <!-- Row 3 -->
                     
-                    <!-- Tailwind CSS Skill Card -->
-                    <div class="col-start-1 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.4s;">
+
+                    <!--============= Row 3 ============ -->
+
+                    <!-- Skill Card 4 -->
+                    <div class="col-start-1 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.4s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-css3 text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">Tailwind CSS</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 85%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 85%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">85%</span>
                         </div>
+
                         <!-- Branch right -->
                         <div class="absolute top-1/2 left-full w-60 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div>
                     </div>
 
-                    <!-- JavaScript Skill Card -->
-                    <div class="col-start-4 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <!-- Skill Card 5 -->
+                    <div class="col-start-4 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.3s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-js text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">JavaScript</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 60%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 60%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">60%</span>
                         </div>
+
                         <!-- Branch right -->
                         <div class="absolute top-1/2 left-full w-80 h-3.5 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div>
                     </div>
 
-                    <!-- Horizontal connecting branch -->
+                    <!-- Branch Horizontal -->
                     <!-- <div class="col-start-5 col-span-5 row-start-3 w-3/4 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5"></div> -->
 
-                    <!-- Git Skill Card -->
-                    <div class="col-start-7 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.6s;">
+                    <!-- Skill Card 6 -->
+                    <div class="col-start-7 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.6s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-git-alt text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">Git</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 70%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 70%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">70%</span>
                         </div>
                     </div>
 
-                    <!-- Row 4 - Vertical connectors -->
+
+
+                    <!-- ============= Row 4 ============ -->
+
                     <div class="col-start-2 row-start-2 justify-self-center w-3 h-80 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
                     <!-- <div class="col-start-5 row-start-3 justify-self-center w-3 h-60 bg-tan-200 border border-tan-300 rounded-sm z-2"></div> -->
                     <div class="col-start-7 row-start-2 justify-self-center w-3 h-80 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
 
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-3 h-60 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
 
-                    <!-- Row 5 (Bottom Level) -->
-                    
-                    <!-- HTML Skill Card -->
-                    <div class="col-start-2 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.1s;">
+
+
+                    <!--============= Row 5 ============ -->
+
+                    <!-- Skill Card 7 -->
+                    <div class="col-start-2 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.1s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-html5 text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">HTML</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 90%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 90%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">90%</span>
                         </div>
@@ -225,18 +255,20 @@
                         <!-- <div class="absolute top-1/2 left-full w-8 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div> -->
                     </div>
 
-                    <!-- Horizontal connecting branch -->
+                    <!-- Branch Horizontal -->
                     <div class="col-start-3 col-span-4 row-start-4 self-center h-4 bg-tan-300 rounded-sm z-5"></div>
 
-                    <!-- CSS Skill Card -->
-                    <div class="col-start-6 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <!-- Skill Card 8 -->
+                    <div class="col-start-6 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                        style="animation-delay: 0.2s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-css3-alt text-sm text-sage-500 opacity-70"></i>
                             <h3 class="text-sm font-semibold text-sage-600 m-0">CSS</h3>
                         </div>
                         <div class="flex items-center gap-2">
                             <div class="flex-1 h-2 bg-mint-100 rounded-sm overflow-hidden border border-mint-200">
-                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300" style="width: 75%"></div>
+                                <div class="h-full bg-mint-600 rounded-sm transition-all duration-300"
+                                    style="width: 75%"></div>
                             </div>
                             <span class="text-xs font-medium text-sage-500 min-w-[30px]">75%</span>
                         </div>
@@ -246,48 +278,59 @@
                     <!-- <div class="col-start-7 row-start-1 self-end w-6 h-3 bg-tan-100 border border-tan-200 rounded-sm opacity-80 z-5"></div>
                     <div class="col-start-1 row-start-4 self-start w-4 h-3 bg-tan-100 border border-tan-200 rounded-sm opacity-80 z-5"></div> -->
 
-
                 </div>
             </div>
         </section>
 
-        <!-- Suggestion Section -->
+        <!-- =================================
+                        FORM
+         ================================== -->
         <section id="suggest" class="py-8 bg-mint-100">
             <div class="max-w-2xl mx-auto px-4">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-sage-600 mb-2">🌱 Suggest a Skill</h2>
-                    <p class="text-lg text-sage-500 m-0">Help us grow the skill tree by suggesting new skills to add</p>
+                    <h2 class="text-3xl font-bold text-sage-600 mb-2">Suggest a Skill</h2>
+                    <p class="text-lg text-sage-500 m-0">Which skill should I add to my skill tree?</p>
                 </div>
 
                 <div class="bg-white p-8 rounded-xl border-2 border-mint-200 shadow-md">
                     <form id="suggestionForm" class="space-y-4">
                         <div>
-                            <label for="skillName" class="block mb-2 font-medium text-sm text-sage-600">Skill Name</label>
-                            <input type="text" id="skillName" name="skillName" class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20" required />
+                            <label for="skillName" class="block mb-2 font-medium text-sm text-sage-600">Skill
+                                Name</label>
+                            <input type="text" id="skillName" name="skillName"
+                                class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20"
+                                required />
                         </div>
-                        
+
                         <div>
-                            <label for="skillCategory" class="block mb-2 font-medium text-sm text-sage-600">Category</label>
-                            <select id="skillCategory" name="skillCategory" class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20 appearance-none" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%234a7c59\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpolyline points=\'6 9 12 15 18 9\'%3E%3C/polyline%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px;">
+                            <label for="skillCategory"
+                                class="block mb-2 font-medium text-sm text-sage-600">Category</label>
+                            <select id="skillCategory" name="skillCategory"
+                                class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20 appearance-none"
+                                style="padding-right: 40px;">
                                 <option value="">Select a category</option>
                                 <option value="Frontend">Frontend</option>
                                 <option value="Backend">Backend</option>
                                 <option value="Tools & DevOps">Tools & DevOps</option>
                                 <option value="Design">Design</option>
                                 <option value="Database">Database</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
-                        
+
                         <div>
-                            <label for="skillDescription" class="block mb-2 font-medium text-sm text-sage-600">Why this skill?</label>
-                            <textarea id="skillDescription" name="skillDescription" rows="3" class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20 font-sans"></textarea>
+                            <label for="skillDescription" class="block mb-2 font-medium text-sm text-sage-600">Why this
+                                skill?</label>
+                            <textarea id="skillDescription" name="skillDescription" rows="3"
+                                class="block w-full px-3 py-2 text-sage-600 bg-sage-50 border-2 border-mint-200 rounded-lg transition-all duration-200 focus:border-mint-500 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-opacity-20 font-sans"></textarea>
                         </div>
-                        
-                        <button type="submit" class="w-full bg-mint-600 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-mint-700 active:bg-mint-800 border-none cursor-pointer">
+
+                        <button type="submit"
+                            class="w-full bg-mint-600 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-mint-700 active:bg-mint-800 border-none cursor-pointer">
                             Submit Suggestion
                         </button>
                     </form>
-                    
+
                     <div id="formMessage" class="hidden mt-4 p-3 rounded-lg text-center font-medium"></div>
                 </div>
             </div>
@@ -297,11 +340,12 @@
     <!-- Footer -->
     <footer class="bg-tan-200 text-sage-600 py-6 text-center border-t-2 border-tan-300">
         <div class="max-w-6xl mx-auto px-4">
-            <p class="m-0 font-medium">© 2025 – The Skill Tree. Growth never stops 🌿</p>
+            <p class="m-0 font-medium">© The Skill Tree. Growth never stops. | <a href="https://github.com/pari55051">U.N. Owen</a> | 2025</p>
         </div>
     </footer>
 
     <script src="./app.js"></script>
 
 </body>
+
 </html>
