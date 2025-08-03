@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     initializeSkillTree();
     initializeForm();
-    addScrollEffects();
 });
 
 function initializeSkillTree() {
@@ -85,21 +84,6 @@ function initializeForm() {
     }
 }
 
-function addScrollEffects() {
-    const navbarLink = document.querySelector('nav a[href="#suggest"]');
-    if (navbarLink) {
-        navbarLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetSection = document.querySelector('#suggest');
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    }
-}
 
 function showSkillDetails(skillName, progress) {
     // skill descriptions
@@ -136,12 +120,7 @@ function showSkillDetails(skillName, progress) {
 
     document.body.appendChild(modal);
 
-    // In - animatation
-    setTimeout(() => {
-        modal.style.opacity = '1';
-        modal.querySelector('div').style.transform = 'scale(1)';
-    }, 10);
-
+    
     // close details
     const closeModal = () => {
         modal.style.opacity = '0';
@@ -162,6 +141,7 @@ function showSkillDetails(skillName, progress) {
     };
     document.addEventListener('keydown', handleEscape);
 }
+
 
 function showFormMessage(message, type) {
     const formMessage = document.getElementById('formMessage');
