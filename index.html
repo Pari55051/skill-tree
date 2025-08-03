@@ -11,6 +11,18 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Marcellus&display=swap" rel="stylesheet">
+
+    <style>
+        * {font-family: "Bricolage Grotesque", sans-serif;}
+        h1 {font-family: "Marcellus", serif;}
+        /* * {font-family: monospace;} */
+    </style>
+
     <script>
         tailwind.config = {
             theme: {
@@ -94,7 +106,7 @@
             <div class="relative max-w-5xl mx-auto px-8">
 
                 <!-- Trunk -->
-                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-tan-200 border-2 border-tan-300 rounded-sm shadow-sm z-50"></div>
+                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-tan-200 border-2 border-tan-300 rounded-sm shadow-sm z-[7]"></div>
 
                 <!-- Grid Start -->
                 <div class="grid grid-cols-8 grid-rows-5 gap-4 pt-8 relative"
@@ -104,7 +116,7 @@
                     <!--============= Row 1 ============ -->
 
                     <!-- Skill Card 1 -->
-                    <div class="col-start-4 col-span-2 row-start-1 flex flex-col justify-between relative z-10 bg-mint-100 border-2 border-mint-200 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-4 col-span-2 row-start-1 min-w-fit flex flex-col justify-between relative z-10 bg-mint-100 border-2 border-mint-200 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.7s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-universal-access text-sm text-sage-500 opacity-70"></i>
@@ -126,7 +138,7 @@
                     <!-- ============= Row 2 ================-->
 
                     <!-- Skill Card 2 -->
-                    <div class="col-start-2 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-2 col-span-2 row-start-2 min-w-fit flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.5s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-bug text-sm text-sage-500 opacity-70"></i>
@@ -147,7 +159,7 @@
                     <div class="col-start-3 col-span-5 row-start-2 self-center h-3 bg-tan-200 border border-tan-300 rounded-sm z-5"></div>
 
                     <!-- Skill Card 3 -->
-                    <div class="col-start-6 col-span-2 row-start-2 flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-6 col-span-2 row-start-2 min-w-fit flex flex-col justify-between relative z-10 bg-mint-200 border-2 border-mint-300 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.8s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-puzzle-piece text-sm text-sage-500 opacity-70"></i>
@@ -167,7 +179,7 @@
                     <!--============= Row 3 ============ -->
 
                     <!-- Skill Card 4 -->
-                    <div class="col-start-1 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-1 col-span-2 row-start-3 min-w-fit flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.4s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-css3 text-sm text-sage-500 opacity-70"></i>
@@ -186,7 +198,7 @@
                     </div>
 
                     <!-- Skill Card 5 -->
-                    <div class="col-start-4 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-4 col-span-2 row-start-3 min-w-fit flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.3s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-js text-sm text-sage-500 opacity-70"></i>
@@ -201,14 +213,14 @@
                         </div>
 
                         <!-- Branch right -->
-                        <div class="absolute top-1/2 left-full w-80 h-3.5 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div>
+                        <div class="absolute top-1/2 left-full w-3/4 h-3.5 bg-tan-200 border border-tan-300 rounded-sm z-5 transform -translate-y-1/2"></div>
                     </div>
 
                     <!-- Branch Horizontal -->
                     <!-- <div class="col-start-5 col-span-5 row-start-3 w-3/4 h-3 bg-tan-200 border border-tan-300 rounded-sm z-5"></div> -->
 
                     <!-- Skill Card 6 -->
-                    <div class="col-start-7 col-span-2 row-start-3 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-7 col-span-2 row-start-3 min-w-fit flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.6s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-git-alt text-sm text-sage-500 opacity-70"></i>
@@ -238,7 +250,7 @@
                     <!--============= Row 5 ============ -->
 
                     <!-- Skill Card 7 -->
-                    <div class="col-start-2 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-2 col-span-2 row-start-4 min-w-fit flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.1s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-html5 text-sm text-sage-500 opacity-70"></i>
@@ -259,7 +271,7 @@
                     <div class="col-start-3 col-span-4 row-start-4 self-center h-4 bg-tan-300 rounded-sm z-5"></div>
 
                     <!-- Skill Card 8 -->
-                    <div class="col-start-6 col-span-2 row-start-4 flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
+                    <div class="col-start-6 col-span-2 row-start-4 min-w-fit flex flex-col justify-between relative z-10 bg-mint-300 border-2 border-mint-400 rounded-sm p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-mint-500 animate-fade-in-up"
                         style="animation-delay: 0.2s;">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fab fa-css3-alt text-sm text-sage-500 opacity-70"></i>
