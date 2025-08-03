@@ -4,11 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initializeSkillTree() {
-
+    // hover effects
     const skillCards = document.querySelectorAll('[class*="col-start-"][class*="row-start-"]');
 
     skillCards.forEach(card => {
         if (card.querySelector('h3')) {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+                this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(-4px)';
+                this.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            });
 
             // skill details on click
             card.addEventListener('click', function () {
@@ -33,14 +42,15 @@ function initializeForm() {
             const skillCategory = formData.get('skillCategory');
             const skillDescription = formData.get('skillDescription').trim();
 
-
-            // --- fake form submission ---
+            // --- fake form submission animation ---
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
 
+            // loading state
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Planting...';
             submitButton.disabled = true;
-          
+
+            // submitted message
             setTimeout(() => {
                 showFormMessage(
                     `Thank you! "${skillName}" has been suggested for the ${skillCategory} category. It will be reviewed for addition to our skill tree!`,
@@ -99,6 +109,11 @@ function showSkillDetails(skillName, progress) {
 
     document.body.appendChild(modal);
 
+    // In - animatation
+    setTimeout(() => {
+        modal.style.opacity = '1';
+        modal.querySelector('div').style.transform = 'scale(1)';
+    }, 10);
 
     // close details
     const closeModal = () => {
@@ -141,4 +156,3 @@ function showFormMessage(message, type) {
         });
     }
 }
-
