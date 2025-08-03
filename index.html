@@ -22,13 +22,14 @@
             font-family: "Bricolage Grotesque", sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         h1 {font-family: "Marcellus", serif;}
         
     </style>
 
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -79,7 +80,7 @@
     </script>
 </head>
 
-<body class="bg-mint-50 text-sage-600 font-sans">
+<body class="bg-mint-50 dark:bg-mint-100 text-sage-600 dark:text-sage-300 font-sans">
 
 
     <nav class="bg-mint-100 border-b border-mint-200 px-4 py-4 shadow-sm">
@@ -95,6 +96,7 @@
                         class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
                         Suggest a Skill
                     </a>
+                    <button><i class="text-sage-500 font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600 fa-solid fa-lightbulb" id="theme-toggle"></i></button>
                 </div>
             </div>
         </div>
@@ -360,7 +362,23 @@
         </div>
     </footer>
 
+    
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const root = document.documentElement;
+
+        // Restore theme from localStorage
+        if (localStorage.theme === 'dark') {
+            root.classList.add('dark');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            const isDark = root.classList.toggle('dark');
+            localStorage.theme = isDark ? 'dark' : 'light';
+        });
+    </script>
     <script src="./app.js"></script>
+
 
 </body>
 
