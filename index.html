@@ -80,10 +80,10 @@
     </script>
 </head>
 
-<body class="bg-mint-50 dark:bg-mint-100 text-sage-600 dark:text-sage-300 font-sans">
+<body class="bg-mint-50 dark:bg-mint-500 text-sage-600 dark:text-sage-400 font-sans">
 
 
-    <nav class="bg-mint-100 border-b border-mint-200 px-4 py-4 shadow-sm">
+    <nav class="bg-mint-100 dark:bg-mint-400 border-b border-mint-200 px-4 py-4 shadow-sm">
         <div class="max-w-6xl mx-auto">
             <div class="flex items-center justify-between">
                 <h1 class="text-2xl font-bold text-sage-600 m-0">Skill Tree</h1>
@@ -91,6 +91,10 @@
                     <a href="#home"
                         class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
                         Home
+                    </a>
+                    <a href="./branches.html"
+                        class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
+                        Dive Deep
                     </a>
                     <a href="#suggest"
                         class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
@@ -366,17 +370,13 @@
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const root = document.documentElement;
-
-        // Restore theme from localStorage
-        if (localStorage.theme === 'dark') {
-            root.classList.add('dark');
-        }
-
+        if (localStorage.theme === 'dark') { root.classList.add('dark'); }
         toggleBtn.addEventListener('click', () => {
             const isDark = root.classList.toggle('dark');
             localStorage.theme = isDark ? 'dark' : 'light';
         });
     </script>
+
     <script src="./app.js"></script>
 
 
