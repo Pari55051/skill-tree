@@ -74,23 +74,22 @@
 
 <body class="bg-mint-50 dark:bg-mint-500 text-sage-600 dark:text-sage-300 font-sans">
 
-    <!-- navbar -->
-    <nav class="bg-mint-100 border-b border-mint-200 px-4 py-4 shadow-sm">
+    <nav class="bg-mint-100 dark:bg-mint-400 border-b border-mint-200 px-4 py-4 shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto">
             <div class="flex items-center justify-between">
                 <h1 class="text-2xl font-bold text-sage-600 m-0">Skill Tree</h1>
                 <div>
-                    <a href="index.html#home"
+                    <a href="./index.html"
                         class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
                         Home
                     </a>
-                    <a href="index.html#suggest"
+                    <a href="./index.html#suggest"
                         class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
                         Suggest a Skill
                     </a>
-                    <a href="explore-branches.html"
-                        class="text-sage-600 bg-mint-200 font-medium px-4 py-2 rounded-lg transition-all duration-300 border-b-4 border-mint-500">
-                        Explore Branches
+                    <a href="#"
+                        class="text-sage-500 no-underline font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600">
+                        Dive Deep
                     </a>
                     <button><i class="text-sage-500 font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:bg-mint-200 hover:text-sage-600 fa-solid fa-lightbulb" id="theme-toggle"></i></button>
                 </div>
@@ -103,7 +102,7 @@
 
         <!-- Heading -->
         <section class="bg-mint-100 py-12 text-center" id="hero">
-            <h1 class="text-4xl font-bold text-sage-700 dark:text-sage-600">Explore the Branches</h1>
+            <h1 class="text-4xl font-bold text-sage-700 dark:text-sage-600">Explore the Tree</h1>
             <p class="mt-2 text-sage-500 dark:text-sage-400 text-lg">Every part of the tree has a story — from roots to canopy.</p>
         </section>
 
@@ -121,13 +120,6 @@
                 </ul>
             </div>
             <div class="bg-mint-50 border border-mint-300 rounded-xl shadow-sm p-6 flex flex-col items-center">
-                <div class="text-xl text-sage-500 mb-2"><i class="fas fa-server"></i></div>
-                <h3 class="text-lg font-semibold text-sage-700 mb-2">Backend</h3>
-                <ul class="text-sage-500 text-sm space-y-1 text-center">
-                <li>Node.js</li><li>Express</li><li>APIs</li>
-                </ul>
-            </div>
-            <div class="bg-mint-50 border border-mint-300 rounded-xl shadow-sm p-6 flex flex-col items-center">
                 <div class="text-xl text-sage-500 mb-2"><i class="fas fa-code-branch"></i></div>
                 <h3 class="text-lg font-semibold text-sage-700 mb-2">Tools</h3>
                 <ul class="text-sage-500 text-sm space-y-1 text-center">
@@ -138,9 +130,17 @@
                 <div class="text-xl text-sage-500 mb-2"><i class="fas fa-paint-brush"></i></div>
                 <h3 class="text-lg font-semibold text-sage-700 mb-2">Design</h3>
                 <ul class="text-sage-500 text-sm space-y-1 text-center">
-                <li>Figma</li><li>UI Basics</li><li>Color Theory</li>
+                <li>Figma</li><li>UI Basics</li><li>Logo Design</li>
                 </ul>
             </div>
+            <div class="bg-mint-50 border border-mint-300 rounded-xl shadow-sm p-6 flex flex-col items-center">
+                <div class="text-xl text-sage-500 mb-2"><i class="fas fa-server"></i></div>
+                <h3 class="text-lg font-semibold text-sage-700 mb-2">Miscellaneous</h3>
+                <ul class="text-sage-500 text-sm space-y-1 text-center">
+                <li>PCB Design</li><li>Arduino Programming</li><li>Making a Mechanical Keyboard</li>
+                </ul>
+            </div>
+
             </div>
         </div>
         </section>
@@ -148,7 +148,7 @@
         <!-- Section 3 - Trunk - Core Skills -->
         <section class="bg-sage-50 py-16 px-4">
         <div class="max-w-4xl mx-auto flex flex-col items-center">
-            <h2 class="text-3xl font-bold text-sage-700 dark:text-sage-600 text-center mb-8">The Trunk – Core Foundations</h2>
+            <h2 class="text-3xl font-bold text-sage-700 dark:text-sage-600 text-center mb-8">The Trunk - Core Foundations</h2>
             <div class="grid gap-8 w-full md:grid-cols-2">
             <div class="bg-white border-l-4 border-sage-600 shadow rounded-md px-6 py-4">
                 <h3 class="font-semibold text-sage-700">Problem Solving</h3>
@@ -173,20 +173,20 @@
         <!-- Section 4 - Fallen LEaves - Abandones stuff -->
         <section class="bg-mint-50/80 py-16 px-4">
         <div class="max-w-3xl mx-auto space-y-8">
-            <h2 class="text-3xl font-bold text-sage-700 text-center mb-2">Fallen Leaves – Paused Skills</h2>
+            <h2 class="text-3xl font-bold text-sage-700 text-center mb-2">Fallen Leaves - Paused Skills</h2>
             <div class="flex flex-col gap-4">
             <div class="bg-gradient-to-r from-tan-200 to-tan-100 border-l-4 border-tan-300 rounded-md px-6 py-4 shadow flex items-center gap-4 opacity-80">
                 <i class="fab fa-vuejs text-2xl text-tan-500"></i>
                 <div>
-                <h3 class="font-semibold text-tan-800 mb-1">Vue.js</h3>
-                <p class="text-tan-600 text-sm">Tried it briefly, but prioritized React and JS fundamentals.</p>
+                <h3 class="font-semibold text-tan-800 mb-1">React JS</h3>
+                <p class="text-tan-600 text-sm">Tried it briefly, focusing on vanilla JS for now.</p>
                 </div>
             </div>
             <div class="bg-gradient-to-r from-tan-100 to-tan-200 border-l-4 border-tan-300 rounded-md px-6 py-4 shadow flex items-center gap-4 opacity-80">
                 <i class="fab fa-sass text-2xl text-tan-500"></i>
                 <div>
-                <h3 class="font-semibold text-tan-800 mb-1">SASS/SCSS</h3>
-                <p class="text-tan-600 text-sm">On pause as Tailwind covers most styling needs now.</p>
+                <h3 class="font-semibold text-tan-800 mb-1">Bootstrap</h3>
+                <p class="text-tan-600 text-sm">Tried, but it is outdated now so didn't go too deep.</p>
                 </div>
             </div>
             </div>
@@ -198,25 +198,25 @@
         <!-- Section 5 - Seedlings - Learning stuff -->
         <section class="bg-white py-16 px-4">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-sage-700 text-center mb-8">Seedlings – Just Getting Started</h2>
+            <h2 class="text-3xl font-bold text-sage-700 text-center mb-8">Seedlings - Just Getting Started</h2>
             <div class="flex flex-wrap justify-center gap-8">
             <div class="flex flex-col items-center">
                 <div class="w-32 h-32 bg-mint-100 border-4 border-mint-300 rounded-full flex items-center justify-center shadow opacity-75">
-                <span class="text-sage-700 font-bold text-lg">TypeScript</span>
+                <span class="text-sage-700 font-bold text-lg">Python</span>
                 </div>
-                <span class="text-sage-500 text-sm mt-3 text-center w-32 block">Exploring type safety and interfaces.</span>
+                <span class="text-sage-500 text-sm mt-3 text-center w-32 block">Learning new programming language</span>
             </div>
             <div class="flex flex-col items-center">
                 <div class="w-32 h-32 bg-mint-200 border-4 border-mint-300 rounded-full flex items-center justify-center shadow opacity-75">
-                <span class="text-sage-700 font-bold text-lg">Testing</span>
+                <span class="text-sage-700 font-bold text-lg">UX Design</span>
                 </div>
-                <span class="text-sage-500 text-sm mt-3 text-center w-32 block">Basics of automation and unit tests.</span>
+                <span class="text-sage-500 text-sm mt-3 text-center w-32 block">Learning UX design, and improving on UI design</span>
             </div>
             <div class="flex flex-col items-center">
                 <div class="w-32 h-32 bg-mint-50 border-4 border-mint-200 rounded-full flex items-center justify-center shadow opacity-75">
-                <span class="text-sage-700 font-bold text-lg">MongoDB</span>
+                <span class="text-sage-700 font-bold text-lg">SQL</span>
                 </div>
-                <span class="text-sage-500 text-sm mt-3 text-center w-32 block">Just getting started with NoSQL DBs.</span>
+                <span class="text-sage-500 text-sm mt-3 text-center w-32 block">Learning DB integration along with Python</span>
             </div>
             </div>
         </div>
@@ -226,24 +226,25 @@
         <!-- Section 6 - Canopy - goals -->
         <section class="bg-mint-50 py-16 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-sage-700 text-center mb-12">The Canopy – Future Growth</h2>
+            <h2 class="text-3xl font-bold text-sage-700 text-center mb-12">The Canopy - Future Growth</h2>
             <div class="relative flex flex-col items-center">
             <div class="flex flex-row items-center justify-between w-full space-x-0 sm:space-x-8">
                 <!-- Timeline line -->
                 <div class="absolute top-16 left-0 right-0 h-1 bg-sage-200 z-0"></div>
-                <!-- Milestone 1 -->
-                <div class="relative flex flex-col items-center w-1/3 z-10">
-                <div class="w-8 h-8 bg-sage-600 rounded-full flex items-center justify-center mb-2 ring-4 ring-white ring-offset-2"></div>
-                <h4 class="font-semibold text-sage-700 text-center">Learn TypeScript</h4>
-                <p class="text-sage-500 text-sm text-center">Sep 2025</p>
-                </div>
-                <!-- Milestone 2 -->
+
+                <!-- card 1 -->
                 <div class="relative flex flex-col items-center w-1/3 z-10">
                 <div class="w-8 h-8 bg-sage-600 rounded-full flex items-center justify-center mb-2 ring-4 ring-white ring-offset-2"></div>
                 <h4 class="font-semibold text-sage-700 text-center">Full-stack Project</h4>
                 <p class="text-sage-500 text-sm text-center">Dec 2025</p>
                 </div>
-                <!-- Milestone 3 -->
+                <!-- card 2 -->
+                <div class="relative flex flex-col items-center w-1/3 z-10">
+                <div class="w-8 h-8 bg-sage-600 rounded-full flex items-center justify-center mb-2 ring-4 ring-white ring-offset-2"></div>
+                <h4 class="font-semibold text-sage-700 text-center">Learn TypeScript</h4>
+                <p class="text-sage-500 text-sm text-center">2026</p>
+                </div>
+                <!-- card 3 -->
                 <div class="relative flex flex-col items-center w-1/3 z-10">
                 <div class="w-8 h-8 bg-sage-600 rounded-full flex items-center justify-center mb-2 ring-4 ring-white ring-offset-2"></div>
                 <h4 class="font-semibold text-sage-700 text-center">Learn GraphQL</h4>
@@ -258,7 +259,7 @@
         <!-- Section 7 - roots - story -->
         <section class="bg-white py-16 px-4">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-sage-700 text-center mb-10">Roots – Where It All Began</h2>
+            <h2 class="text-3xl font-bold text-sage-700 text-center mb-10">Roots - Where It All Began</h2>
             <div class="relative">
             <!-- Timeline bar -->
             <div class="absolute left-6 top-0 bottom-0 w-1 bg-tan-200 rounded-full"></div>
@@ -268,8 +269,8 @@
                     <span class="text-xs font-bold text-sage-700">1</span>
                 </div>
                 <div>
-                    <h4 class="text-sage-700 font-semibold">2021: First Steps</h4>
-                    <p class="text-sage-500 mt-2 text-sm">Tweaked a blog theme, discovered joy in small code changes.</p>
+                    <h4 class="text-sage-700 font-semibold">2020: First Steps</h4>
+                    <p class="text-sage-500 mt-2 text-sm">Learnt some basic HTML/CSS in school, which got me interested in actual programming. Was doing only Scravh by this time.</p>
                 </div>
                 </div>
                 <div class="relative">
@@ -278,7 +279,7 @@
                 </div>
                 <div>
                     <h4 class="text-sage-700 font-semibold">Curiosity Turns to Passion</h4>
-                    <p class="text-sage-500 mt-2 text-sm">Started learning HTML/CSS in earnest, making personal projects.</p>
+                    <p class="text-sage-500 mt-2 text-sm">Started learning web development in earnest, making a few small projects.</p>
                 </div>
                 </div>
                 <div class="relative">
@@ -287,7 +288,7 @@
                 </div>
                 <div>
                     <h4 class="text-sage-700 font-semibold">Falling in Love with the Process</h4>
-                    <p class="text-sage-500 mt-2 text-sm">Progressed into JavaScript, Git, and more advanced web techniques.</p>
+                    <p class="text-sage-500 mt-2 text-sm">Progressed into JavaScript, Git, and more advanced web techniques. Excited to explore more</p>
                 </div>
                 </div>
             </div>
@@ -299,15 +300,15 @@
         <!-- Section 8 - challenges -->
         <!-- <section class="bg-mint-100 py-16 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-sage-700 dark:text-sage-600 text-center mb-8">Wind & Weather – Challenges Faced</h2>
+            <h2 class="text-3xl font-bold text-sage-700 dark:text-sage-600 text-center mb-8">Wind & Weather - Challenges Faced</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-white rounded-xl p-6 shadow flex flex-col items-center">
-                <div class="text-3xl mb-2">🌪️</div>
+                <div class="text-3xl mb-2"></div>
                 <h3 class="font-semibold text-sage-700 mb-1">Debugging Frustrations</h3>
                 <p class="text-sage-500 text-sm text-center">Spent hours hunting a missing semicolon — learned to slow down and read carefully.</p>
             </div>
             <div class="bg-white rounded-xl p-6 shadow flex flex-col items-center">
-                <div class="text-3xl mb-2">🌧️</div>
+                <div class="text-3xl mb-2"></div>
                 <h3 class="font-semibold text-sage-700 mb-1">Burnout Moments</h3>
                 <p class="text-sage-500 text-sm text-center">Learned to pace my learning and take proper breaks.</p>
             </div>
@@ -323,7 +324,8 @@
         </section>
     </main>
 
-    <!-- footer -->
+    
+
     <footer class="bg-tan-200 text-sage-600 py-6 text-center border-t-2 border-tan-300">
         <div class="max-w-6xl mx-auto px-4">
             <p class="m-0 font-medium">© The Skill Tree. Growth never stops. | <a href="https://github.com/pari55051">U.N. Owen</a> | 2025</p>
